@@ -1,0 +1,5 @@
+== Stress2: 4 busy threads, first 600 ms excluded, 8s per config ==
+  [LOAD buffer=22ms  no-MMCSS] bufFrames=1056 mmcss=off coverage=99,31% DISCONTINUITY=5 lostByQpc~38ms +1886ms(qpcJump=0,0ms) +1919ms(qpcJump=0,0ms) +4574ms(qpcJump=-0,1ms) +4608ms(qpcJump=38,1ms) +4608ms(qpcJump=0,0ms) | loop gap ms p50=10,0 p99=14,0 max=60,6
+  [LOAD buffer=22ms  MMCSS-Audio] bufFrames=1056 mmcss=joined task 'Audio' coverage=98,30% DISCONTINUITY=6 lostByQpc~136ms +1053ms(qpcJump=0,0ms) +1054ms(qpcJump=48,0ms) +3691ms(qpcJump=0,0ms) +3727ms(qpcJump=40,8ms) +6406ms(qpcJump=0,1ms) +6414ms(qpcJump=48,0ms) | loop gap ms p50=10,0 p99=10,6 max=78,8
+  [LOAD buffer=200ms no-MMCSS] bufFrames=9600 mmcss=off coverage=98,81% DISCONTINUITY=1 lostByQpc~99ms +2950ms(qpcJump=99,9ms) | loop gap ms p50=10,0 p99=12,1 max=308,6
+  [LOAD buffer=1s    no-MMCSS] bufFrames=48000 mmcss=off coverage=100,15% DISCONTINUITY=0 lostByQpc~0ms  | loop gap ms p50=10,0 p99=19,9 max=142,8

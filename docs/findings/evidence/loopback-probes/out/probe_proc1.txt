@@ -1,0 +1,62 @@
+== Process loopback probe (VAD\Process_Loopback; never opens a capture endpoint) ==
+own pid=4520, active-session pid=4588
+
+=== INCLUDE own pid (silent target) ===
+  OK bufferFrames=480 fmt: tag=0x3 ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x0 sub=-
+  [window] window=5,0s packets=500 frames=240000 coverage=99,8% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=455 eventTimeout=0 peakNonSilentData=0,0000 peakDataInSilentPkts=0,0000
+    pkt +22ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +28ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +38ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +47ms frames=480 flags=0 devPos=0 peak=0,000000
+    gap@546ms: wallGap=6,2ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@556ms: wallGap=10,5ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@566ms: wallGap=9,3ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@575ms: wallGap=9,6ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@585ms: wallGap=10,0ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@595ms: wallGap=10,2ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@605ms: wallGap=9,8ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@615ms: wallGap=10,1ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@625ms: wallGap=10,0ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@635ms: wallGap=10,0ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@646ms: wallGap=10,5ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@655ms: wallGap=9,7ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+
+=== INCLUDE active-session pid tree ===
+  OK bufferFrames=480 fmt: tag=0x3 ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x0 sub=-
+  [window] window=5,0s packets=493 frames=236640 coverage=98,6% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=492 eventTimeout=1 peakNonSilentData=0,7789 peakDataInSilentPkts=0,0000
+    pkt +75ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +87ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +96ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +106ms frames=480 flags=0 devPos=0 peak=0,470784
+    gap@133ms: wallGap=11,4ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@142ms: wallGap=9,2ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@152ms: wallGap=10,7ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@161ms: wallGap=8,9ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@173ms: wallGap=11,1ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@182ms: wallGap=9,1ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@193ms: wallGap=11,0ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@203ms: wallGap=10,3ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@215ms: wallGap=11,8ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@227ms: wallGap=12,7ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@232ms: wallGap=4,9ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@243ms: wallGap=10,2ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+
+=== EXCLUDE active-session pid tree (system mix minus that app) ===
+  OK bufferFrames=480 fmt: tag=0x3 ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x0 sub=-
+  [window] window=5,0s packets=501 frames=240480 coverage=100,0% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=501 eventTimeout=0 peakNonSilentData=0,0000 peakDataInSilentPkts=0,0000
+    pkt +10ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +21ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +30ms frames=480 flags=0 devPos=0 peak=0,000000
+    pkt +40ms frames=480 flags=0 devPos=0 peak=0,000000
+    gap@22ms: wallGap=10,8ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@32ms: wallGap=9,5ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@42ms: wallGap=10,3ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@52ms: wallGap=10,3ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@62ms: wallGap=9,3ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@72ms: wallGap=10,6ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@82ms: wallGap=10,0ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@92ms: wallGap=10,0ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@102ms: wallGap=9,5ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@112ms: wallGap=10,1ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@123ms: wallGap=10,8ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@133ms: wallGap=9,9ms devPosJump=-480 frames (-10,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480

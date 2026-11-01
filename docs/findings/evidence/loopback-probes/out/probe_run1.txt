@@ -1,0 +1,98 @@
+== LoopProbe (render endpoints only) ==
+OS: Microsoft Windows NT 6.2.9200.0  64bit=True
+eRender endpoints (all states): 11
+  #0 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-1>}
+  #1 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-2>}
+  #2 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-3>}
+  #3 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-4>}
+  #4 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-5>}
+  #5 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-6>}
+  #6 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-7>}
+  #7 state=0x1 flow=0 console=True multimedia=True comms=True
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-8>}
+  #8 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-9>}
+  #9 state=0x4 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-10>}
+  #10 state=0x8 flow=0 console=False multimedia=False comms=False
+      name='?'
+      id={0.0.0.00000000}.{<endpoint-guid-11>}
+
+Using default eRender/eConsole endpoint: ?
+  DeviceFormat (PKEY_AudioEngine_DeviceFormat): tag=0xFFFE ch=2 rate=48000 bits=16 valid=16 blockAlign=4 mask=0x3 sub=00000001-0000-0010-8000-00aa00389b71
+  endpoint master volume (scalar)=0,620 mute=False
+  endpoint meter peak right now (other apps' output) = 0,6847
+
+-- Initialize(loopback|eventcallback) buffer-duration table --
+  hnsBufferDuration=        0 -> OK  GetBufferSize=1056 frames (22,0 ms)  mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71  defPeriod=10,00ms minPeriod=3,00ms
+  hnsBufferDuration=   100000 -> OK  GetBufferSize=1056 frames (22,0 ms)  mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71  defPeriod=10,00ms minPeriod=3,00ms
+  hnsBufferDuration=   200000 -> OK  GetBufferSize=1056 frames (22,0 ms)  mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71  defPeriod=10,00ms minPeriod=3,00ms
+  hnsBufferDuration=   500000 -> OK  GetBufferSize=2400 frames (50,0 ms)  mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71  defPeriod=10,00ms minPeriod=3,00ms
+  hnsBufferDuration=  2000000 -> OK  GetBufferSize=9600 frames (200,0 ms)  mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71  defPeriod=10,00ms minPeriod=3,00ms
+  hnsBufferDuration= 10000000 -> OK  GetBufferSize=48000 frames (1000,0 ms)  mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71  defPeriod=10,00ms minPeriod=3,00ms
+
+=== SCENARIO RUN: event-driven, buffer=0 (engine default) ===
+  loopback init OK; bufferFrames=1056 mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71
+  meter(before)=0,7047 meter(after phase A)=0,8169 meter(end of sine)=0,7791
+  [A idle (probe renders nothing)] window=4,0s packets=401 frames=192096 coverage=99,7% silentFlagged=0 discontinuity=3 tsError=0 eventSignaled=400 eventTimeout=0 peakNonSilentData=0,9858 peakDataInSilentPkts=0,0000
+  [B render zeros FLAGGED SILENT ] window=3,0s packets=301 frames=144480 coverage=100,2% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=301 eventTimeout=0 peakNonSilentData=0,9863 peakDataInSilentPkts=0,0000
+  [C render zeros (no flag)      ] window=3,0s packets=302 frames=144960 coverage=99,8% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=302 eventTimeout=0 peakNonSilentData=0,9873 peakDataInSilentPkts=0,0000
+  [D render quiet 440Hz sine     ] window=0,6s packets=61 frames=29280 coverage=99,7% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=61 eventTimeout=0 peakNonSilentData=0,9871 peakDataInSilentPkts=0,0000
+  [E render stream closed        ] window=4,0s packets=401 frames=192480 coverage=99,9% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=401 eventTimeout=0 peakNonSilentData=0,9865 peakDataInSilentPkts=0,0000
+  -- gap analysis (devPos/QPC continuity) over whole run --
+    gap@231ms: wallGap=3,0ms devPosJump=8544 frames (178,0 ms) qpcJump=178,0ms flags=1 prevFlags=1 frames=480
+  sine written amp=0.0100, loopback peak seen=0,9871
+  first packet at +227 ms from run start; last packet at +15092 ms
+  after render stream closed, last packet arrived +4019 ms (-1 = none)
+
+=== SCENARIO RUN: event-driven, buffer=1s ===
+  loopback init OK; bufferFrames=48000 mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71
+  meter(before)=0,7920 meter(after phase A)=0,7298 meter(end of sine)=0,6632
+  [A idle (probe renders nothing)] window=4,0s packets=400 frames=192000 coverage=99,8% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=400 eventTimeout=0 peakNonSilentData=0,9870 peakDataInSilentPkts=0,0000
+  [B render zeros FLAGGED SILENT ] window=3,0s packets=301 frames=144480 coverage=99,9% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=301 eventTimeout=0 peakNonSilentData=0,9874 peakDataInSilentPkts=0,0000
+  [C render zeros (no flag)      ] window=3,0s packets=302 frames=144960 coverage=100,0% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=302 eventTimeout=0 peakNonSilentData=0,9867 peakDataInSilentPkts=0,0000
+  [D render quiet 440Hz sine     ] window=0,6s packets=62 frames=29760 coverage=100,7% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=62 eventTimeout=0 peakNonSilentData=0,9871 peakDataInSilentPkts=0,0000
+  [E render stream closed        ] window=4,0s packets=400 frames=192000 coverage=99,9% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=400 eventTimeout=0 peakNonSilentData=0,9854 peakDataInSilentPkts=0,0000
+  -- gap analysis (devPos/QPC continuity) over whole run --
+    [whole] no device-position / qpc jumps > thresholds
+  sine written amp=0.0100, loopback peak seen=0,9871
+  first packet at +59 ms from run start; last packet at +14830 ms
+  after render stream closed, last packet arrived +4006 ms (-1 = none)
+
+=== SCENARIO RUN: polling 10ms, buffer=1s ===
+  loopback init OK; bufferFrames=48000 mix: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71
+  meter(before)=0,6280 meter(after phase A)=0,9810 meter(end of sine)=0,9850
+  [A idle (probe renders nothing)] window=4,0s packets=399 frames=191520 coverage=99,6% silentFlagged=0 discontinuity=1 tsError=0 eventSignaled=0 eventTimeout=0 peakNonSilentData=0,9860 peakDataInSilentPkts=0,0000
+  [B render zeros FLAGGED SILENT ] window=3,0s packets=303 frames=146400 coverage=101,3% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=0 eventTimeout=0 peakNonSilentData=0,9852 peakDataInSilentPkts=0,0000
+  [C render zeros (no flag)      ] window=3,0s packets=300 frames=144480 coverage=99,4% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=0 eventTimeout=0 peakNonSilentData=0,9865 peakDataInSilentPkts=0,0000
+  [D render quiet 440Hz sine     ] window=0,7s packets=66 frames=32160 coverage=102,9% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=0 eventTimeout=0 peakNonSilentData=0,9850 peakDataInSilentPkts=0,0000
+  [E render stream closed        ] window=4,0s packets=401 frames=193920 coverage=100,6% silentFlagged=0 discontinuity=0 tsError=0 eventSignaled=0 eventTimeout=0 peakNonSilentData=0,9867 peakDataInSilentPkts=0,0000
+  -- gap analysis (devPos/QPC continuity) over whole run --
+    gap@4111ms: wallGap=75,0ms devPosJump=0 frames (0,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@4201ms: wallGap=74,0ms devPosJump=0 frames (0,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@4268ms: wallGap=66,9ms devPosJump=0 frames (0,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+    gap@4423ms: wallGap=78,6ms devPosJump=0 frames (0,0 ms) qpcJump=-0,1ms flags=0 prevFlags=0 frames=480
+    gap@8965ms: wallGap=65,5ms devPosJump=0 frames (0,0 ms) qpcJump=0,7ms flags=0 prevFlags=0 frames=480
+    gap@12952ms: wallGap=83,5ms devPosJump=0 frames (0,0 ms) qpcJump=0,0ms flags=0 prevFlags=0 frames=480
+  sine written amp=0.0100, loopback peak seen=0,9850
+  first packet at +67 ms from run start; last packet at +15066 ms
+  after render stream closed, last packet arrived +4035 ms (-1 = none)
+
+== done ==

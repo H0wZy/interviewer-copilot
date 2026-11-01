@@ -1,0 +1,5 @@
+== Stress3 (MMCSS task comparison): 4 busy threads, first 600 ms excluded, 8s per config ==
+  [LOAD buffer=22ms  MMCSS-Pro Audio] mmcss=joined task 'Pro Audio' coverage=97,73% DISCONTINUITY=6 lostByQpc~174ms | loop gap ms p99=10,4 max=111,4
+  [LOAD buffer=22ms  MMCSS-Capture] mmcss=joined task 'Capture' coverage=99,59% DISCONTINUITY=4 lostByQpc~46ms | loop gap ms p99=10,3 max=57,7
+  [LOAD buffer=1s    MMCSS-Pro Audio] mmcss=joined task 'Pro Audio' coverage=100,13% DISCONTINUITY=0 lostByQpc~0ms | loop gap ms p99=10,5 max=78,2
+  [LOAD buffer=1s    no-MMCSS (repeat)] mmcss=off coverage=100,17% DISCONTINUITY=0 lostByQpc~0ms | loop gap ms p99=10,8 max=147,8

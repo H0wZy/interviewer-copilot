@@ -1,0 +1,4 @@
+== Packet age: (read time) - (packet QPC start) and - (packet QPC end), event-driven loopback, buffer=1s ==
+  n=552  age of packet START (ms): min=0,1 p50=0,1 p99=2,8 max=12,9
+  n=552  age of packet END   (ms): min=-9,9 p50=-9,9 p99=-7,2 max=2,9
+  first packet arrived 15 ms after Start() returned; first packet flags=1 devPos=480

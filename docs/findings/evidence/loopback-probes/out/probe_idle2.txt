@@ -1,0 +1,4 @@
+== LoopProbe IDLE mode (render endpoints only), maxWait=1200s ==
+endpoint: ?
+waited 1200,1s, polls=9734, maxMeterSeen=0,9868, idleReached=False
+RESULT: endpoint never became idle; cannot observe idle behaviour on this run.

@@ -1,0 +1,43 @@
+# --- secrets ---
+.env
+.env.*
+!.env.example
+
+# --- personal data (the repo is public; never commit) ---
+ENG_CV_*.pdf
+*CV*.pdf
+systeminfo.md
+systeminfo*.txt
+
+# --- audio recordings and diagnostics dumps (other people's voices) ---
+*.wav
+*.mp3
+*.m4a
+*.flac
+
+# --- build outputs ---
+node_modules/
+dist/
+target/
+src-tauri/target/
+src-tauri/gen/
+*.exe
+*.dll
+*.pdb
+
+# --- python / STT (venvs and models live outside the repo) ---
+.venv/
+venv/
+stt-venv/
+__pycache__/
+*.pyc
+/models/
+stt-worker/models/
+*.log
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.swp

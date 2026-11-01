@@ -1,0 +1,8 @@
+== AUTOCONVERTPCM on ENDPOINT loopback (render endpoint only) ==
+control mix fmt: tag=0xFFFE ch=2 rate=48000 bits=32 valid=32 blockAlign=8 mask=0x3 sub=00000003-0000-0010-8000-00aa00389b71  buf=1056
+16k/mono/s16 + AUTOCONVERTPCM|SRC_DEFAULT_QUALITY: Initialize OK, buf=356 frames
+16k/mono/s16 WITHOUT AUTOCONVERTPCM: FAILED OpenCustom Initialize hr=0x88890008 (tag=0x1 ch=1 rate=16000 bits=16 valid=16 blockAlign=2 mask=0x0 sub=-, autoconvert=False)
+  [control f32/48k/2ch] window=4,0s packets=401 frames=192480 coverage=100,1% silentFlagged=0 discontinuity=1 tsError=0 eventSignaled=401 eventTimeout=0 peakNonSilentData=0,9865 peakDataInSilentPkts=0,0000
+  control RMS (all channels) = 0,35455
+  [converted s16/16k/mono] window=4,0s packets=401 frames=64129 coverage=100,1% silentFlagged=0 discontinuity=1 tsError=0 eventSignaled=401 eventTimeout=0 peakNonSilentData=0,9940 peakDataInSilentPkts=0,0000
+  converted RMS = 0,32750; packets=401; avg frames/packet=159,9; expected 160 frames per 10 ms

@@ -1,0 +1,5 @@
+== WAVEFORMATEXTENSIBLE 16k mono s16 + AUTOCONVERTPCM on ENDPOINT loopback ==
+  [plain WAVEFORMATEX (tag=1,cbSize=0)] packets=402 frames=64320 (avg 160,0/pkt) RMS=0,35190 peak=0,9893 buf=356
+  [EXTENSIBLE mask=0x4] packets=402 frames=64320 (avg 160,0/pkt) RMS=0,23437 peak=0,8836 buf=356
+  [EXTENSIBLE mask=0x1] packets=402 frames=64320 (avg 160,0/pkt) RMS=0,23437 peak=0,8836 buf=356
+  [EXTENSIBLE mask=0x0] packets=402 frames=64320 (avg 160,0/pkt) RMS=0,35190 peak=0,9893 buf=356
